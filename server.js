@@ -15,10 +15,6 @@ MongoClient.connect(db.url, { useNewUrlParser: true }, (err, database) => {
   require('./app/routes')(app, db);
 
   app.listen(port, () => {
-    console.log('listening on port: ${port}');
+    console.log('listening on port: ' + port);
   });
-
-  app.close(port, () => {
-    console.log('Shut down on port: ${port}');
-  }
 });
