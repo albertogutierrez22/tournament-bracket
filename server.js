@@ -5,16 +5,20 @@ const db             = require('./config/db');
 
 const app            = express();
 
+//env variables
 const port = 8000;
 
 app.use(bodyParser.urlencoded({extended: true}));
 
 MongoClient.connect(db.url, { useNewUrlParser: true }, (err, database) => {
   if(err) return console.error(err);
-  db = database.db("tournament-api");
   require('./app/routes')(app, db);
 
-  app.listen(port, () =>{
-    console.log('server listening on '+ port);
+  app.listen(port, () => {
+    console.log('listening on port: ${port}');
   });
+
+  app.close(port, () => {
+    console.log('Shut down on port: ${port}');
+  }
 });

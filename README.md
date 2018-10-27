@@ -1,4 +1,4 @@
-# README tournament-bracket
+#tournament-bracket
 
 This is an app to keep track of tournament results and keep tally of users
 guessed the most results correctly.
