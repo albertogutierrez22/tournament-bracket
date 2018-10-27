@@ -17,4 +17,7 @@ MongoClient.connect(db.url, { useNewUrlParser: true }, (err, database) => {
   app.listen(port, () => {
     console.log('listening on port: ' + port);
   });
+  app.get('/', (req, res) => {
+    res.send('index');
+  });
 });
