@@ -1,0 +1,27 @@
+{
+  "name": "tournament-bracket",
+  "version": "1.0.0",
+  "description": "app to track of tournament results and keep tally of users who guessed the most results correctly",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabrgu/tournament-bracket.git"
+  },
+  "author": "fabrgu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabrgu/tournament-bracket/issues"
+  },
+  "homepage": "https://github.com/fabrgu/tournament-bracket#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.5"
+  }
+}
